@@ -81,7 +81,7 @@ async function init() {
     const generatedMarkdown = generateMarkdown(userResponses);
 
     // Call function to write the generated markdown to a README file
-    console.log(generatedMarkdown);
+    writeToFile('README.md', generatedMarkdown);
   } catch (error) {
     console.error('Error generating README:', error);
   }
