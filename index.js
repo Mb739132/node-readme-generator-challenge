@@ -16,7 +16,51 @@ const questions = [
     name: 'description',
     message: 'Enter a description of your project:',
   },
+
+  {
+    type: 'input',
+    name: 'installation',
+    message: 'Provide installation instructions:',
+  },
+
+  {
+    type: 'input',
+    name: 'usage',
+    message: 'Provide usage information:',
+  },
+
+  {
+    type: 'input',
+    name: 'contributing',
+    message: 'Provide contribution guidelines:',
+  },
+
+  {
+    type: 'input',
+    name: 'tests',
+    message: 'Provide test instructions:',
+  },
+
+  {
+    type: 'list',
+    name: 'license',
+    message: 'Choose a license for your project:',
+    choices: ['MIT', 'Apache 2.0', 'GPLv3', 'BSD 3-Clause', 'None'],
+  },
+  
   // ... other questions ...
+  {
+    type: 'input',
+    name: 'email',
+    message: 'Enter your email address:',
+  },
+
+  {
+    type: 'input',
+    name: 'username',
+    message: 'Enter your GitHub username:',
+  },
+
 ];
 
 // TODO: Create a function to write README file
@@ -37,7 +81,7 @@ async function init() {
     const generatedMarkdown = generateMarkdown(userResponses);
 
     // Call function to write the generated markdown to a README file
-    writeToFile('README.md', generatedMarkdown);
+    console.log(generatedMarkdown);
   } catch (error) {
     console.error('Error generating README:', error);
   }
